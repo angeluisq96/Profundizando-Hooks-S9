@@ -1,22 +1,18 @@
-import { useState, useCallback } from 'react'
 import { Hijo } from './Hijo'
+import { useCallback, useState } from 'react';
 
 export const Padre = () => {
 
     const numeros = [2,4,6,8,10];
     const [valor, setValor] = useState(0);
 
-    const incrementar = ( num ) => {
-        setValor( (c) => c + num )
-    }
-
-    const memorizeIncrement = useCallback(
+    const incrementar = useCallback(
         ( num ) => {
-            incrementar( num )
+            setValor( (oldValue) => oldValue + num )
         },
       [],
-    )
-    
+    );
+       
 
 
     return (
@@ -31,7 +27,7 @@ export const Padre = () => {
                     <Hijo 
                         key={ n }
                         numero={ n }
-                        incrementar={ memorizeIncrement }
+                        incrementar={ incrementar }
                     />
                 ))
             }

@@ -1,23 +1,53 @@
+import { useEffect } from 'react';
+import { useForm } from '../hooks/useForm';
 
-import { useForn } from "../hooks/useForn";
 
 export const FormWithCustomHook = () => {
 
-    const { formState, onInputChange, onResetForm, user, mail, pass } = useForn( {
-        user: '',
-        mail: '',
-        pass: '',
-    } )
+    const { formState, onInputChange, onResetForm, username, email, password } = useForm({
+        username: '',
+        email: '',
+        password: ''
+    });
 
-  return (
-    <>
-        <h1>FormWithCustomHook</h1>
-        <hr />
-        <input type="text" className='form-control' placeholder='User' name='user' value={ user } onChange={ onInputChange } />
-        <input type="text" className='form-control mt-2' placeholder='Email' name='mail' value={ mail } onChange={ onInputChange } />
-        <input type="text" className='form-control mt-2' placeholder='Password' name='pass' value={ pass } onChange={ onInputChange } />
-        <button className='btn btn-primary mt-2' onClick={ onResetForm } >Reset</button>
-        {/* { user === 'Vegeta' && <Message /> } */}
-    </>
-  )
+    // const { username, email, password } = formState;
+  
+
+    return (
+        <>
+            <h1>Formulario con custom Hook</h1> 
+            <hr />
+
+            <input 
+                type="text" 
+                className="form-control"
+                placeholder="Username"
+                name="username"
+                value={ username }
+                onChange={ onInputChange }
+            />
+
+            <input 
+                type="email" 
+                className="form-control mt-2"
+                placeholder="fernando@google.com"
+                name="email"
+                value={ email }
+                onChange={ onInputChange }
+            />
+
+            <input 
+                type="password" 
+                className="form-control mt-2"
+                placeholder="Contraseña"
+                name="password"
+                value={ password }
+                onChange={ onInputChange }
+            />
+
+
+            <button onClick={ onResetForm } className="btn btn-primary mt-2">Borrar</button>
+
+        </>
+    )
 }

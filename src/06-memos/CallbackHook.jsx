@@ -1,24 +1,34 @@
-import React, { useCallback, useState } from 'react'
-// import { useCounter } from '../hooks/useCounter';
+import { useCallback, useEffect, useState } from 'react';
 import { ShowIncrement } from './ShowIncrement';
+
 
 export const CallbackHook = () => {
 
-  const [ counter, setCounter ] = useState(1);
-  const incrementCounter = useCallback(
-    (value) => {
-      setCounter( (c) => c + value )
-    },
-    [],
-  )
+    const [counter, setCounter] = useState( 10 );
 
-  // Con el use callback memorizo la funciony evito que se ejecute otra vez
-  
-  return (
-    <>
-        <h1>Use Callback Hook: { counter }</h1>
-        <hr />
-        <ShowIncrement increment={ incrementCounter }/>
-    </>
-  )
+    const incrementFather = useCallback(
+      (value) => {
+        setCounter( (c) => c + value );
+      },
+      [],
+    );
+
+    useEffect(() => {
+      // incrementFather();
+    }, [incrementFather])
+    
+    
+    // const incrementFather = () => {
+    //     setCounter( counter + 1);
+    // }
+
+
+    return (
+        <>
+            <h1>useCallback Hook: { counter } </h1>
+            <hr />
+
+            <ShowIncrement increment={ incrementFather } />
+        </>
+    )
 }
