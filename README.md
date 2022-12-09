@@ -27,7 +27,9 @@ El custom hooks de como usar un hook. Atencion que este hook depende de otro cus
 
 ## Learn More
 
-Descripcion 1
+Ante cualquier duda, error o bug. contactarme a mis redes:
+
+https://www.linkedin.com/in/angel-luis-506677153/
 
 ### Referencias
 
