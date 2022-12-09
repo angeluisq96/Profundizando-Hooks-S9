@@ -46,6 +46,6 @@ export const useTodo = ( initialState = [] ) => {
         handleDeleteTodo,
         handleToggleTodo,
         countTodo: toDos.length,
-        countPrndingTodo: toDos.filter( todo => !todo.done ).length
+        countPendingTodo: toDos.filter( todo => !todo.done ).length
     }
 }
