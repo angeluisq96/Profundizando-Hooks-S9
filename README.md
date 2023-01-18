@@ -16,3 +16,6 @@
 ### Simular queryParams y queryStrings
 
 ## Recuerden que el objetivo de las pruebas, es ir probando cosas nuevas cada vez y tener un repertorio completo de diferentes casos.
+
+
+# 1.- Instalacion de dependencias y configuracion de testing
