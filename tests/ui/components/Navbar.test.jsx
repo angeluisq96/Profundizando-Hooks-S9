@@ -45,7 +45,7 @@ describe('Pruebas en Navbar', () => {
       </AuthContext.Provider>
     );
     
-    const logoutButton =  screen.getByRole('button');
+    const logoutButton = screen.getByRole('button');
     fireEvent.click( logoutButton );
     expect( contextValue.logout ).toHaveBeenCalled();
     expect( mockedUseNavigate ).toHaveBeenCalledWith("/login", {"replace": true});
