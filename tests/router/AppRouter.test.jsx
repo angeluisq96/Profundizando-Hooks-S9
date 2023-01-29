@@ -37,9 +37,6 @@ describe('Pruebas en AppRouter', () => {
        </MemoryRouter>
     )
 
-    screen.debug();
-
-
     expect( screen.getAllByText('superman') ).toBeTruthy();
     expect( screen.getAllByText('Logout') ).toBeTruthy();
   })
