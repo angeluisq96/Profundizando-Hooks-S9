@@ -82,3 +82,6 @@ install dev dependences and first Tests in fileUpload
 
 ### 2.- session
 install SDK cloudinary, install and set setimmediate and delete resouce from cloudinary
+
+### .- session
+Testing in authSlice: name, initialState, login, logout and logout with arguments
