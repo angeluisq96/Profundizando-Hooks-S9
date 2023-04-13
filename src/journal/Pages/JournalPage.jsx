@@ -1,14 +1,14 @@
 // import { Typography } from "@mui/material"
 import { AddOutlined } from "@mui/icons-material"
 import { IconButton } from "@mui/material"
-import { useMemo } from "react"
+// import { useMemo } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { startNewNote } from "../../store/journal"
 import { JournalLayout } from "../layout/JournalLayout"
 import { NoteView, NothingSelectedView, /* NoteView */ } from "../views"
 
 export const JournalPage = () => {
-  const { isSaving, active, errorMessage } = useSelector(state => state.journal)
+  const { isSaving, active } = useSelector(state => state.journal)
   // const isSavingNewNote = useMemo(() => isSaving === true, [isSaving])
   
   // const isCreatingNewNote = useMemo(() => status === 'checking', [status])
