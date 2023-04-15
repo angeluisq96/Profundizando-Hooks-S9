@@ -7,6 +7,7 @@ import { addNewEmptyNote, savingNewNote, setActiveNote, setNotes, setSaving, upd
 
 export const startNewNote = () => {
   return async( dispatch, getState ) => {
+    dispatch( savingNewNote() )    
     const { uid } = getState().auth;
     const newNote = {
       title: '',
@@ -16,8 +17,8 @@ export const startNewNote = () => {
     const newDoc = doc( collection( FirebaseDB, `${ uid }/journal/notes` ) )
     const resp = await setDoc( newDoc, newNote )
     newNote.id = newDoc.id;
-    dispatch( savingNewNote() )    
-    dispatch( addNewEmptyNote( newNote ) )    
+    dispatch( addNewEmptyNote( newNote ) ) 
+    dispatch( setActiveNote({ ...newNote, imageURL: [] }) ) 
   }
 }
 

@@ -43,7 +43,7 @@ describe('Tests auth thunks', () => {
     const loginData = { ok:true, ...userTests } ;
     const registerData = { email: userTests.email, password: 'zaraza', displayName: userTests.displayName } ;
     await registerWithEmailAndPassword.mockResolvedValue( loginData ) ;
-    await startRegisterWithEmailAndPassword( registerData )( dispatch )
+    await startRegisterWithEmailAndPassword( registerData )( dispatch ) ;
     expect( dispatch ).toHaveBeenCalledWith( checkingCredentials() ) ;
     expect( dispatch ).toHaveBeenCalledWith( login(loginData) ) ;
   } ) ;
@@ -52,16 +52,16 @@ describe('Tests auth thunks', () => {
     const loginData = { ok:false, errorMessage: 'password faint' } ;
     const registerData = { email: userTests.email, password: 'zaraza', displayName: userTests.displayName } ;
     await registerWithEmailAndPassword.mockResolvedValue( loginData ) ;
-    await startRegisterWithEmailAndPassword( registerData )( dispatch )
+    await startRegisterWithEmailAndPassword( registerData )( dispatch ) ;
     expect( dispatch ).toHaveBeenCalledWith( checkingCredentials() ) ;
     expect( dispatch ).toHaveBeenCalledWith( logout( loginData.errorMessage ) ) ;
   } ) ;
 
   test('should startLogout call logoutFirebase', async () => {
     await startLogout()( dispatch ) ;
-    expect( logoutFirebase ).toHaveBeenCalled();
-    expect( dispatch ).toHaveBeenCalledWith( clearNotesLogout() );
-    expect( dispatch ).toHaveBeenCalledWith( logout() );
+    expect( logoutFirebase ).toHaveBeenCalled() ;
+    expect( dispatch ).toHaveBeenCalledWith( clearNotesLogout() ) ;
+    expect( dispatch ).toHaveBeenCalledWith( logout() ) ;
   } ) ;
 
 } ) ;

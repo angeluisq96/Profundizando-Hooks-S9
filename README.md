@@ -83,11 +83,14 @@ install dev dependences and first Tests in fileUpload
 ### 2.- session
 install SDK cloudinary, install and set setimmediate and delete resouce from cloudinary
 
-### .- tests about thunks
+### .- tests about auth thunks
 create thunks.test -> 
   mock firebase to importations
   create dispatch with jest.fn()
   first test to checkingAuthentication
 
-### .- thunks - checkingCredentials, login true or login false
+### 5.- auth thunks - checkingCredentials, login true or login false
   Testing to checkingAuthentication, startGoogleSingin, startUserAndPasswordSingIn, startRegisterWithEmailAndPassword and startLogout
+
+### 6.- journal thunks and journalSlice
+  Create mooks to dispatch and getState. then first test in startMewNote, await startNewNote and expect savingNewNote, addNewEmptyNote, setActiveNote
