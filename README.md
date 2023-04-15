@@ -89,4 +89,5 @@ create thunks.test ->
   create dispatch with jest.fn()
   first test to checkingAuthentication
 
-### .- thunks - checkingCredentials true or false
+### .- thunks - checkingCredentials, login true or login false
+  Testing to checkingAuthentication, startGoogleSingin, startUserAndPasswordSingIn, startRegisterWithEmailAndPassword and startLogout
