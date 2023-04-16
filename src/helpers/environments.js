@@ -1,6 +1,8 @@
+
 export const environments = () => {
-  import.meta.env;
+  const env = import.meta
+  console.log(import.meta);
   return {
-    ...import.meta.env
+    ...env, aja: 2
   }
 }
