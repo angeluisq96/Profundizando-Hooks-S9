@@ -25,12 +25,12 @@ describe('testing in thunks to journal', () => {
       id: expect.any( String ), 
       date: expect.any( Number ),
       imageURL: [] 
-    } ) ) ;
+    } ) );
 
     const collectRef = collection( FirebaseDB, `${ userTests.uid }/journal/notes` ) ;
     const docs = await getDocs( collectRef ) ;
     const deletePromises = [] ;
     docs.forEach( doc => deletePromises.push( deleteDoc( doc.ref ) ) ) ;
     await Promise.all( deletePromises )
-  } ) ;
+  }, 100000 ) ;
 } ) ;

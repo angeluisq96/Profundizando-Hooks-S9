@@ -83,7 +83,7 @@ install dev dependences and first Tests in fileUpload
 ### 2.- session
 install SDK cloudinary, install and set setimmediate and delete resouce from cloudinary
 
-### .- tests about auth thunks
+### 3, 4.- tests about auth thunks
 create thunks.test -> 
   mock firebase to importations
   create dispatch with jest.fn()
