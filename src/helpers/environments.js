@@ -1,6 +1,6 @@
 export const environments = () => {
-  const env = import.meta.env
+  import.meta.env;
   return {
-    ...env
+    ...import.meta.env
   }
 }

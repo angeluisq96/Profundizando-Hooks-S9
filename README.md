@@ -94,3 +94,6 @@ create thunks.test ->
 
 ### 6.- journal thunks and journalSlice
   Create mooks to dispatch and getState. then first test in startMewNote, await startNewNote and expect savingNewNote, addNewEmptyNote, setActiveNote
+
+### 7.- Create and set environments key 
+  Create mooks to dispatch and getState. then first test in startMewNote, await startNewNote and expect savingNewNote, addNewEmptyNote, setActiveNote
