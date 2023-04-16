@@ -97,3 +97,10 @@ create thunks.test ->
 
 ### 7.- Create and set environments key 
   Create mooks to dispatch and getState. then first test in startMewNote, await startNewNote and expect savingNewNote, addNewEmptyNote, setActiveNote
+
+### 7.- First tests by component with redux
+  Create test a funtional component (LoginPage) and config to succeess render component:
+    add Provider, add MemoryRouter and store, add and set up.
+
+  Its very dificult but i understand. in this class we required and mock react-redux, to modify dispatch and expect call function with arguments
+    

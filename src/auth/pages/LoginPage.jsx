@@ -35,15 +35,16 @@ export const LoginPage = () => {
   return (
     <AuthLayout title="Login">
       <form 
+        aria-label="submit-form"
         onSubmit={onSubmitForm}
         className="animate__animated animate__fadiIn animate__faster"
       >
         <Grid container>
           <Grid item xs={12}>
             <TextField
-              label="Correo"
+              label="Email"
               type="email"
-              placeholder="correo@lkp.com"
+              placeholder="email@lkp.com"
               fullWidth
               name="email"
               value={email}
@@ -56,6 +57,7 @@ export const LoginPage = () => {
               type="password"
               placeholder="Password"
               name="password"
+              aria-label="password"
               value={password}
               onChange={onInputChange}
               fullWidth
@@ -78,6 +80,7 @@ export const LoginPage = () => {
               <Button
                 disabled={isAuthenticating}
                 variant='contained'
+                aria-label="google-btn"
                 fullWidth
                 onClick={onLoginGoogle} >
                 <Google />

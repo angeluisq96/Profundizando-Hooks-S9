@@ -6,7 +6,6 @@ import { getFirestore } from 'firebase/firestore/lite'
 import { environments } from '../helpers';
 
 const env = environments();
-console.log({...env})
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
